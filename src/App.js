@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
 
 // Components
 import Cart from './components/Cart/Cart'
@@ -23,12 +23,12 @@ function App() {
         <SideNav />
 
         <main className="main">
-          <Switch>
-            <Route path="/orderhistory"> <OrderHistory click={() => setShowCart(true)} /> </Route>
-            <Route path="/profile"> <Profile click={() => setShowCart(true)} /> </Route>
-            <Route path="/baskets"> <Baskets click={() => setShowCart(true)} /> </Route>
-            <Route path="/"> <Redirect from="/" to="/baskets" /> </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" render={() => <Navigate to="baskets" replace={true} />} />
+            <Route path="orderhistory" element={<OrderHistory click={() => setShowCart(true)} />} />
+            <Route path="profile" element={<Profile click={() => setShowCart(true)} />} />
+            <Route path="baskets" element={<Baskets click={() => setShowCart(true)} />} />
+          </Routes>
         </main>
 
         <Stats />

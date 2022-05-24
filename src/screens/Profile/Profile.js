@@ -2,9 +2,9 @@ import React from 'react'
 
 const Profile = () => {
     return (
-        <main className="profile">
+        <div className="profile">
             Profile Screen
-        </main>
+        </div>
     )
 }
 

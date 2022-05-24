@@ -14,17 +14,17 @@ const SideNav = () => {
                         </Link>
                     </div>
                     <div className="links">
-                        <Link to="/profile">
+                        <Link to="profile">
                             <div className="link_item">
                                 <i className="uil uil-user-circle"></i> <span>Profile</span>                            
                             </div>
                         </Link>
-                        <Link to="/baskets">
+                        <Link to="baskets">
                             <div className="link_item">
                                 <i className="uil uil-shopping-basket"></i> <span>Baskets</span>                            
                             </div>
                         </Link>
-                        <Link to="/orderhistory">
+                        <Link to="orderhistory">
                             <div className="link_item">
                                 <i className="uil uil-history"></i> <span>Order History</span>                            
                             </div>

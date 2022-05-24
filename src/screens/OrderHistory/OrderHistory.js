@@ -2,9 +2,9 @@ import React from 'react'
 
 const OrderHistory = () => {
     return (
-        <main className="order_history">
+        <div className="order_history">
             Order History
-        </main>
+        </div>
     )
 }
 
