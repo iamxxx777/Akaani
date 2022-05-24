@@ -9,7 +9,9 @@ const SideNav = () => {
             <div className="nav_container">
                 <div className="nav_content">
                     <div className="logo">
-                        <img src={logo} alt="Akaani logo" />
+                        <Link to="/">
+                            <img src={logo} alt="Akaani logo" />
+                        </Link>
                     </div>
                     <div className="links">
                         <Link to="/profile">

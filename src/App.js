@@ -24,10 +24,10 @@ function App() {
 
         <main className="main">
           <Switch>
-            <Route path={"/orderhistory"}> <OrderHistory click={() => setShowCart(true)} /> </Route>
-            <Route path={"/profile"}> <Profile click={() => setShowCart(true)} /> </Route>
-            <Route path={"/baskets"}> <Baskets click={() => setShowCart(true)} /> </Route>
-            <Route path={"/"}> <Redirect from="/" to="/baskets" /> </Route>
+            <Route path="/orderhistory"> <OrderHistory click={() => setShowCart(true)} /> </Route>
+            <Route path="/profile"> <Profile click={() => setShowCart(true)} /> </Route>
+            <Route path="/baskets"> <Baskets click={() => setShowCart(true)} /> </Route>
+            <Route path="/"> <Redirect from="/" to="/baskets" /> </Route>
           </Switch>
         </main>
 
