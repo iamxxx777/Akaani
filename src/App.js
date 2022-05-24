@@ -24,10 +24,11 @@ function App() {
 
         <main className="main">
           <Routes>
-            <Route path="/" render={() => <Navigate to="baskets" replace={true} />} />
+            <Route path="/" element={<Navigate to="/baskets" replace={true} />} />
             <Route path="orderhistory" element={<OrderHistory click={() => setShowCart(true)} />} />
             <Route path="profile" element={<Profile click={() => setShowCart(true)} />} />
             <Route path="baskets" element={<Baskets click={() => setShowCart(true)} />} />
+            <Route path="*" element={<Navigate to="/baskets" replace={true} />} />
           </Routes>
         </main>
 
