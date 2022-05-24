@@ -1,0 +1,34 @@
+@import '../../mixins.scss';
+
+.aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 224px;
+    height: 100vh;
+    padding: 0.5rem;
+    .aside_container {
+        height: 100%;
+        @include flex_evenly;
+        flex-direction: column;
+        .invites, .payments, .orders {
+            height: 100%;
+            width: 100%;
+            padding: 2rem 0 0 0.5rem;
+            h2 {
+                font-size: 0.93rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 0.75rem;
+            }
+            p {
+                font-size: 0.7rem;
+                color: $text-color-5;
+                font-weight: 400;
+            }
+        }
+        .invites, .payments {
+            border-bottom: solid 1px $white-2;
+        }
+    }
+}

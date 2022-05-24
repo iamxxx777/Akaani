@@ -1,0 +1,225 @@
+@import '../../mixins.scss';
+
+.cart {
+    max-width: 400px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background-color: $white;
+    box-shadow: 0 3px 8px rgba(158, 158, 158, 0.4);
+    border-radius: 1px;
+    .cart_header {
+        padding: 1rem;
+        @include flex_btw;
+        .text {
+            @include flex-left;
+            button {
+                @include button;
+                margin-right: 1rem;
+                color: $text-color-3;
+                font-size: 1.5rem;
+            }
+            h2 {
+                font: {
+                    size: 1.25rem;
+                    weight: 600;
+                }
+                color: $text-color-2;
+            }
+        }
+        .cart_header_btn {
+            @include flex_center;
+            position: relative;
+            width: 45px;
+            height: 43px;
+            border-radius: 50%;
+            background-color: $primary-color;
+            div {
+                @include flex_center;
+                i {
+                    color: $white;
+                    font-size: 1.25rem;
+                }
+            }
+            span {
+                @include flex_center;
+                color: $text-color;
+                background-color: $white;
+                padding: 0.1rem 0.3rem;
+                border-radius: 50%;
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                font: {
+                    weight: 700;
+                    size: 0.6rem;
+                }
+            }
+        }
+    }
+    .cart_items {
+        width: 100%;
+        height: calc(100% - 165px);
+        overflow-y: auto;
+        padding: 0.5rem 1rem;
+        .cart_items_container {
+            @include flex_column;
+            gap: 0.5rem;
+            
+        }
+    }
+    .cart_total {
+        @include flex_btw;
+        padding: 1rem;
+        border-top: solid 1px rgba(158, 158, 158, 0.4);
+        .total {
+            h2 {
+                margin-bottom: 0.3rem;
+                color: $text-color-7;
+                text-transform: uppercase;
+                font: {
+                    weight: 400;
+                    size: 0.93rem;
+                }
+            }
+            h3 {
+                color: $text-color-2;
+                font: {
+                    weight: 700;
+                    size: 1.25rem;
+                }
+            }
+        }
+        button {
+            @include button;
+            background-color: $primary-color;
+            color: $white;
+            padding: 0.6rem 1.25rem;
+            text-transform: uppercase;
+            font: {
+                weight: 600;
+                size: 0.9rem;
+            }
+            transition: 0.4s linear;
+            &:hover {
+                background-color: $primary-color-3;
+            }
+        }
+    }
+}
+
+
+
+.show_cart {
+    animation: animate 0.7s linear;
+}
+
+.remove_cart {
+    transform: translateX(400px);
+    transition: 0.7s linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(400px);
+    } 100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes anime {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(400);
+    }
+}
+
+
+
+.cart_item {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    gap: 0.5rem;
+    background: rgba(86, 177, 160, 0.2);
+    border-radius: 0.75rem;
+    .img {
+        @include flex_center;
+        width: 55px;
+        height: 53.8px;
+        border-radius: 50%;
+        background: #C9E8D9;
+        img {
+            width: 38px;
+            height: 35px;
+            object-fit: contain;
+        }
+    }
+    .info {
+        h3 {
+            margin-bottom: 0.3rem;
+            color: #514D4D;
+            font: {
+                size: 0.75rem;
+                weight: 400;
+            }
+            text-overflow: ellipsis;
+        }
+        h4 {
+            font: {
+                size: 1.1rem;
+                weight: 700;
+            }
+            color: $text-color-2;
+        }
+    }
+    .qty {
+        @include flex_center;
+        select {
+            background-color: $white;
+            border: none;
+            width: 85px;
+            height: 30px;
+            color: $text-color-2;
+            border-radius: 0.25rem;
+            font: {
+                size: 0.75rem;
+                weight: 700;
+                family: inherit;
+            }
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    .badge {
+        @include flex_right;
+        .badge_item {
+            background-color: #406767;
+            color: $white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            @include flex_center;
+            font: {
+                size: 0.9rem;
+                weight: 600;
+            }
+            text: {
+                transform: uppercase;
+            }
+        }
+    }
+}
+
+
+
+
+
+

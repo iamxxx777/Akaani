@@ -1,0 +1,87 @@
+@import '../../mixins.scss';
+
+.empty_basket {
+    @include flex_center;
+    .empty_content {
+        @include flex_column;
+        .icon {
+            @include flex_center;
+            width: 92px;
+            height: 89px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            background-color: rgba(86, 177, 160, 0.2);
+            i {
+                color: $primary-color-2;
+                font-size: 3rem;
+            }
+        }
+        .text {
+            p {
+                text-align: center;
+                color: $text-color-5;
+                font: {
+                    size: 1rem;
+                    weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+.basket {
+    width: 100%;
+    .basket_header {
+        @include flex_btw;
+        margin-bottom: 1rem;
+        h2 {
+            font: {
+                weight: 600;
+                size: 1.4rem;
+            }
+            color: $text-color;
+        }
+        button {
+            @include button;
+            background-color: $primary-color;
+            font-size: 0.75rem;
+            color: $white;
+            padding: 0.6rem 1rem;
+            transition: 0.3s linear;
+            &:hover {
+                background-color: $primary-color-3;
+            }
+        }
+    }
+    .basket_tabs {
+        width: 100%;
+        .tab_head {
+            @include flex_left;
+            border-bottom: solid 1px $white-2;
+            button {
+                @include button;
+                font-size: 0.93rem;
+                color: $text-color-7;
+                padding: 0.5rem;
+                border-radius: 0;
+                border-bottom: solid 2px transparent;
+                transition: 0.3s linear;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            .active {
+                border-bottom-color: $primary-color;
+                color: $primary-color;
+            }
+        }
+        .tab_body {
+            width: 100%;
+            min-height: 400px;
+            padding-top: 1.5rem;
+        }
+    }
+}
+
+

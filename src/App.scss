@@ -1,0 +1,15 @@
+.App {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.main {
+    border-left: solid 1px #F0F0F0;
+    border-right: solid 1px #F0F0F0;
+    padding: 2rem 1rem;
+    padding-bottom: 0;
+    width: calc(100% - 448px);
+    min-height: 100vh;
+    margin: 0 224px;
+}

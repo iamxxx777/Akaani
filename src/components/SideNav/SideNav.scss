@@ -1,0 +1,108 @@
+@import '../../mixins.scss';
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 224px;
+    height: 100vh;
+    padding: 2rem;
+    .nav_container {
+        @include flex_btw;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+.nav_content {
+    .logo {
+        @include flex_center;
+        margin-bottom: 3rem;
+        img {
+            max-width: 100%;
+            width: 160px;
+            height: 40px;
+            object-fit: contain;
+        }
+    }
+    .links {
+        @include flex_column;
+        a {
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 7px;
+            color: $text-color-4;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            .link_item {
+                @include flex_left;
+                i {
+                    margin-right: 0.6rem;
+                    font-size: 1.3rem;
+                }
+                span {
+                    font-size: 1rem;
+                }
+            }
+            
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+.nav_contact {
+    @include flex_column;
+    .contact_icon {
+        margin-bottom: 0.5rem;
+        width: 58px;
+        height: 56px;
+        background-color: $primary-color-3;
+        color: $white;
+        border-radius: 50%;
+        text-transform: uppercase;
+        @include flex_center;
+        span {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+    }
+    .contact_name {
+        margin-bottom: 0.25rem;
+        span {
+            color: $text-color;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+    .contact_email {
+        margin-bottom: 0.5rem;
+        span {
+            font-weight: 300;
+            font-size: 0.78rem;
+            color: $text-color-8;
+        }
+    }
+    .contact_btn {
+        button {
+            @include button;
+            border: solid 1px $text-color-7;
+            transform: rotate(-90deg);
+            padding: 0 0.3rem;
+            i {
+                font-size: 1.4rem;
+                color: $text-color-9;
+            }
+        }
+    }
+}
+
+
+
